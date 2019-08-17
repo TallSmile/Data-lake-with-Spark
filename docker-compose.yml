@@ -1,0 +1,15 @@
+version: "3"
+services:
+  pyspark:
+    image: jupyter/pyspark-notebook
+    # build:
+      # context: "./"
+    ports:
+      - "8888:8888"
+    volumes:
+          - "./data:/data"
+          - "./src:/src"
+    working_dir: /src
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      # GEN_CERT: "yes"
