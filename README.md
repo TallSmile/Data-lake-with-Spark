@@ -1,8 +1,8 @@
-# Data Modeling with Postgres
+# Data lake with Spark
 
 ## Purpose
 
-The purpose of this project is to analyze data simulated by [eventsim](https://github.com/Interana/eventsim). The simulated data consists of songs and user activity from music streaming app. The main goal of the project is to  construct a postgres database with tables designed to optimize queries on song play analysis. Using the song and log datasets, an ETL pipeline is used to create star schema for this analysis.
+The purpose of this project is to analyze data simulated by [eventsim](https://github.com/Interana/eventsim). The simulated data consists of songs and user activity from music streaming app. The main goal of the project is to  construct a data lake with tables designed to optimize queries on song play analysis. Using the song and log datasets, an ETL pipeline is used to create star schema for this analysis.
 
 ## Getting Started
 
@@ -87,7 +87,6 @@ Artists in music table
 | location     |
 | lattitude    |
 | longitude    |
-|---------------|
 
 Timestamps of records in songplays broken down into specific units
 
