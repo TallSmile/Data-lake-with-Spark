@@ -5,8 +5,6 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import udf, col, monotonically_increasing_id
 from pyspark.sql.functions import year, month, dayofmonth, hour, weekofyear, date_format
 from pyspark.sql.types import DateType, TimestampType
-#temp
-import zipfile
 
 
 config = configparser.ConfigParser()
@@ -122,15 +120,11 @@ def process_log_data(spark, input_data, output_data):
 def main():
     spark = create_spark_session()
 
-#     with zipfile.ZipFile("/data/log-data.zip","r") as zip_ref:
-#         zip_ref.extractall("/tmp")
-#     with zipfile.ZipFile("/data/song-data.zip","r") as zip_ref:
-#         zip_ref.extractall("/tmp")
     input_data = "s3a://udacity-dend/"
     output_data = "s3a://vps-spark-bucket/spark-output/"
-#     input_data= "/tmp/song_data"
+
     process_song_data(spark, input_data, output_data)
-#     input_data= "/tmp/log_data"
+
     process_log_data(spark, input_data, output_data)
 
 
